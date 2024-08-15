@@ -35,6 +35,7 @@ export default function CustomDatePicker({
     <ConfigProvider locale={locale}>
       <DatePicker
         className={className}
+        allowClear={false}
         picker={type}
         defaultValue={dayjs()}
         maxDate={dayjs()}

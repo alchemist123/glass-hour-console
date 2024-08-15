@@ -56,7 +56,7 @@ const data = [
 
 export default function AttendanceHeatGraph(): JSX.Element {
   return (
-    <ResponsiveContainer width="100%" height="100%">
+    <ResponsiveContainer className="h-full w-full grow min-h-80">
       <LineChart
         width={500}
         height={300}
