@@ -5,13 +5,13 @@ import {
   Navigate,
   RouterProvider,
 } from "react-router-dom";
-import MainLayout from "./components/Layout/Layout";
+import MainLayout from "./components/layout/Layout";
 
 const SignIn = lazy(() => import("./views/auth/signIn"));
 const SignUp = lazy(() => import("./views/auth/signUp"));
 const Forgot = lazy(() => import("./views/auth/forgot"));
 const InvalidPage = lazy(() => import("./views/invalidPage"));
-const Hours = lazy(() => import("./views/hour"));
+const Hours = lazy(() => import("./views/hours"));
 const Reports = lazy(() => import("./views/reports"));
 const Tasks = lazy(() => import("./views/tasks"));
 const People = lazy(() => import("./views/people"));

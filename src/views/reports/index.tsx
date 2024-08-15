@@ -1,3 +1,9 @@
+import AttendanceHeatGraph from "../../components/reports/AttendanceHeatGraph";
+
 export default function Index() {
-  return <div>Reports</div>;
+  return (
+    <div>
+      <AttendanceHeatGraph />
+    </div>
+  );
 }

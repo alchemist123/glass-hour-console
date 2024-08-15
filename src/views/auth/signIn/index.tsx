@@ -1,19 +1,22 @@
-import { Form } from "antd";
+import { Form, FormProps } from "antd";
 import CustomButton from "../../../components/common/CustomButton";
 import CustomCard from "../../../components/common/CustomCard";
 import CustomInput from "../../../components/common/CustomInput";
 import CustomPasswordInput from "../../../components/common/CustomPasswordInput";
 
-interface FormValues {
+interface FieldType {
   email: string;
   password: string;
 }
 
 export default function Index() {
-  const onFinish = (values: FormValues) => {
+  const onFinish: FormProps<FieldType>["onFinish"] = (values) => {
     console.log("Success:", values);
   };
-  const onFinishFailed = (errorInfo: any) => {
+
+  const onFinishFailed: FormProps<FieldType>["onFinishFailed"] = (
+    errorInfo
+  ) => {
     console.log("Failed:", errorInfo);
   };
 

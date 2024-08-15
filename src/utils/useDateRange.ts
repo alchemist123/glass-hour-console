@@ -5,7 +5,7 @@ import { daysOfWeek } from "./daysOfWeek";
 dayjs.extend(isoWeek);
 dayjs.extend(isToday);
 
-type DateMap = { [key: string]: string | null };
+export type DateMap = { [key: string]: string | null };
 
 export function useDateRangeWeek(date_string: Dayjs | string) {
   const date = dayjs(date_string).startOf("isoWeek");

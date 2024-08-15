@@ -9,12 +9,12 @@ export default function Index() {
   console.log("dateArray", dateArray);
 
   const renderTableHeader = () => (
-    <thead className="sticky top-0 left-0 bg-tertiary z-10">
+    <thead className="sticky top-0  bg-tertiary z-10">
       <tr>
         {daysOfWeek.map((day) => (
           <th
             key={day}
-            className="text-secondary font-medium py-4 min-w-40 border border-gray-300"
+            className="text-secondary sticky top-0 bg-tertiary z-10 font-medium py-2 min-w-40 border border-gray-300 text-opacity-50"
           >
             {day}
           </th>
@@ -38,12 +38,12 @@ export default function Index() {
   );
 
   return (
-    <div className="h-screen flex flex-col">
-      <div className="flex items-center justify-end gap-5 sticky top-0 p-5 left-0 w-full bg-tertiary z-10">
+    <div className="h-screen flex flex-col gap-5 p-5">
+      <div className="flex items-center justify-end gap-5 sticky top-0 left-0 w-full bg-tertiary z-10">
         <PickerHeader />
       </div>
-      <div className="mb-5 h-screen overflow-auto">
-        <table className="h-full w-full table-fixed relative border-collapse">
+      <div className="h-screen overflow-auto">
+        <table className="h-full w-full table-fixed relative border-separate border-spacing-0">
           {renderTableHeader()}
           {renderTableBody()}
         </table>

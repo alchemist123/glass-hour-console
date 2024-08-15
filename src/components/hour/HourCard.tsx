@@ -50,15 +50,17 @@ export default function HourCard({ data }: HourCardCardProps) {
       <div
         key={index}
         className={`flex flex-col h-full ${
-          isTodayTask ? "bg-primary bg-opacity-20" : "bg-secondary bg-opacity-5"
+          isTodayTask ? "bg-blue-50 bg-opacity-50" : "bg-red-50 bg-opacity-50"
         } min-h-80`}
       >
         <div className="p-2">
           <div className="flex justify-between items-center">
-            <p className="font-medium text-primary text-left">
+            <p className="font-medium text-primary text-left opacity-50">
               {dayjs(value).date()}
             </p>
-            <p className="font-medium text-primary text-right">7hr</p>
+            <p className="font-medium text-primary text-right opacity-50">
+              7hr
+            </p>
           </div>
           {sampleData.map((task) =>
             task.date === value ? (
