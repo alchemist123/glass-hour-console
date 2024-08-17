@@ -1,18 +1,14 @@
-import { ButtonProps, CardProps, InputProps, SelectProps } from "antd";
+import { ButtonProps, CardProps } from "antd";
+import { Dayjs } from "dayjs";
 
 interface buttonTypes extends ButtonProps {
   label: string;
-  className?: string;
-  htmlType?: "button" | "submit" | "reset" | undefined;
-  onClick?: () => void;
-  type: "link" | "default" | "primary" | "text" | "dashed" | undefined;
-  href?: string;
-  loading?: boolean;
 }
 
 interface cardTypes extends CardProps {
+  children: React.ReactNode;
   className?: string;
-  children?: JSX.Element;
+  ref?: React.LegacyRef<unknown> | undefined;
 }
 
 interface datePickerType {
@@ -21,38 +17,7 @@ interface datePickerType {
     | ((date: dayjs.Dayjs, dateString: string | string[]) => void)
     | undefined;
   className?: string;
+  minDate?: Dayjs;
 }
 
-interface inputType extends InputProps {
-  className?: string;
-}
-
-interface passwordInputType extends InputProps {
-  className?: string;
-}
-
-interface selectOptionType {
-  value: string;
-  key: string;
-}
-
-interface selectType extends SelectProps {
-  value: string;
-  onChange:
-    | ((
-        value: string,
-        option?: DefaultOptionType | DefaultOptionType[]
-      ) => void)
-    | undefined;
-  options: selectOptionType[];
-  className?: string;
-}
-
-export {
-  buttonTypes,
-  cardTypes,
-  datePickerType,
-  inputType,
-  passwordInputType,
-  selectType,
-};
+export { buttonTypes, cardTypes, datePickerType };

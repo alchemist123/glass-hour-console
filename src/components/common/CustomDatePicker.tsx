@@ -30,6 +30,7 @@ export default function CustomDatePicker({
   type = "week",
   onChange,
   className,
+  minDate,
 }: datePickerType) {
   return (
     <ConfigProvider locale={locale}>
@@ -37,6 +38,7 @@ export default function CustomDatePicker({
         className={className}
         allowClear={false}
         picker={type}
+        minDate={minDate}
         defaultValue={dayjs()}
         maxDate={dayjs()}
         onChange={onChange}

@@ -1,12 +1,11 @@
 import { EyeInvisibleOutlined, EyeTwoTone } from "@ant-design/icons";
-import { Input } from "antd";
+import { Input, InputProps } from "antd";
 import { clsx } from "clsx/lite";
-import { passwordInputType } from ".";
 
 export default function CustomPasswordInput({
   className,
   ...props
-}: passwordInputType) {
+}: InputProps) {
   return (
     <Input.Password
       {...props}

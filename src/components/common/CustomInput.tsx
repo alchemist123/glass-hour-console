@@ -1,8 +1,7 @@
-import { Input } from "antd";
+import { Input, InputProps } from "antd";
 import { clsx } from "clsx/lite";
-import { inputType } from ".";
 
-export default function CustomInput({ className, ...props }: inputType) {
+export default function CustomInput({ className, ...props }: InputProps) {
   return (
     <Input
       {...props}
