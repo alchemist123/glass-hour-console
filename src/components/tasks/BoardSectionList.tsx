@@ -21,7 +21,7 @@ import BoardSection from "./BoardSection";
 import TaskItem from "./TaskItem";
 import { sampleTask } from "./sampleTask";
 
-const BoardSectionList = () => {
+export default function BoardSectionList() {
   const tasks = sampleTask;
   const initialBoardSections = initializeBoard(sampleTask);
   const [boardSections, setBoardSections] =
@@ -158,6 +158,4 @@ const BoardSectionList = () => {
       </DndContext>
     </div>
   );
-};
-
-export default BoardSectionList;
+}

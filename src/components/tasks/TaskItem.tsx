@@ -5,7 +5,7 @@ type TaskItemProps = {
   task: Task;
 };
 
-const TaskItem = ({ task }: TaskItemProps) => {
+export default function TaskItem({ task }: TaskItemProps) {
   return (
     <CustomCard size="small">
       <p>{task.title}</p>
@@ -13,6 +13,4 @@ const TaskItem = ({ task }: TaskItemProps) => {
       <p>{task.activeTime}</p>
     </CustomCard>
   );
-};
-
-export default TaskItem;
+}

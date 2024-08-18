@@ -1,13 +1,16 @@
-import React from 'react';
-import { useSortable } from '@dnd-kit/sortable';
-import { CSS } from '@dnd-kit/utilities';
+import { useSortable } from "@dnd-kit/sortable";
+import { CSS } from "@dnd-kit/utilities";
+import React from "react";
 
 type SortableTaskItemProps = {
   children: React.ReactNode;
   id: string;
 };
 
-const SortableTaskItem = ({ children, id }: SortableTaskItemProps) => {
+export default function SortableTaskItem({
+  children,
+  id,
+}: SortableTaskItemProps) {
   const {
     attributes,
     listeners,
@@ -28,6 +31,4 @@ const SortableTaskItem = ({ children, id }: SortableTaskItemProps) => {
       {children}
     </div>
   );
-};
-
-export default SortableTaskItem;
+}
