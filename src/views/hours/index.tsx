@@ -6,8 +6,6 @@ import { daysOfWeek } from "../../utils/daysOfWeek";
 export default function Index() {
   const dateArray = usePickerStore((state) => state.date_array);
 
-  console.log("dateArray", dateArray);
-
   const renderTableHeader = () => (
     <thead className="sticky top-0  bg-tertiary z-10">
       <tr>

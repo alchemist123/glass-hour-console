@@ -1,4 +1,6 @@
-export const sampleTask: TaskItem[] = [
+import { Task } from "../../types/task";
+
+export const sampleTask: Task[] = [
   {
     id: "window:67108881:1",
     title: "Hour Glass",
@@ -300,14 +302,3 @@ export const sampleTask: TaskItem[] = [
     runningStatus: "inactive",
   },
 ];
-
-export interface TaskItem {
-  id: string;
-  title: string;
-  platform: string;
-  application: string;
-  task: string | null;
-  activeTime: number;
-  lastActiveTime: string;
-  runningStatus: string;
-}
